@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream-50 text-gray-900;
+  }
+
+  img {
+    @apply max-w-full h-auto;
+  }
+}
+
+@layer components {
+  .product-card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow duration-200;
+  }
+
+  .category-tile {
+    @apply bg-brand-500 text-white rounded-xl p-6 text-center hover:bg-brand-600 transition-colors duration-200;
+  }
+
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-medium px-6 py-3 rounded-lg transition-colors duration-200;
+  }
+
+  .btn-whatsapp:disabled {
+    @apply bg-gray-400 cursor-not-allowed;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(135deg, #1a633b 0%, #237d4b 50%, #2d5a3d 100%);
+  }
+}
